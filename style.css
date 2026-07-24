@@ -1,11 +1,11 @@
 #board{
     display: grid;
-    grid-template-columns: repeat(5, 100px);
-    gap: 5px;
+    grid-template-columns: repeat(7, 65px);
+    gap: 3px;
 }
 
 .cell{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border: 1px solid black;
 }
