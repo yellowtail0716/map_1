@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ローグライク</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
 
-    <div>Player</div>
-    <div id="hpBar">
-        <div id="hpFill"></div>
+    <div id="game-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
+        <h1>簡易ローグライク</h1>
+        
+        <!-- ステータス表示 -->
+        <div id="status">
+            HP: <span id="hp">10/10</span> | 満腹度: <span id="hunger">100/100</span> | 階層: <span id="floor">1</span>F / 5F
+        </div>
+
+        <!-- ゲームのマップを表示するボード -->
+        <div id="board"></div>
+
+        <!-- メッセージを表示するログ窓 -->
+        <div id="log-box" style="width: 400px; height: 80px; background: #252525; border: 1px solid #b3b6b3; margin-top: 10px; padding: 5px; text-align: left; font-size: 13px; overflow-y: auto; color: #23eb4f;">
+            ダンジョンに足を踏み入れた…
+        </div>
+        <div id="message" style="margin-top: 5px; font-size: 14px; color: #0f0f0f;">矢印キーで移動、Spaceで足踏み(回復)、Enterで階段を降りる</div>
     </div>
-
-    <div>Enemy</div>
-    <div id="enemyHpBar">
-        <div id="enemyHpFill"></div>
-    </div>
-
-    <div id="board"></div>
-
-    <script src="script.js"></script>
-
+    <script type="module" src="script.js"></script>
 </body>
 </html>
